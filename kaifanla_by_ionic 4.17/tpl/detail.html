@@ -1,0 +1,23 @@
+<ion-header-bar>
+    <button ng-click="goBack()" class="icon button ion-ios-arrow-left button-icon"></button>
+    <h1 class="title">购物详情</h1>
+</ion-header-bar>
+<div class="card">
+    <div class="item item-divider">
+        <a href="#/start">首页</a>
+        /详情
+    </div>
+    <div class="tab-item my-detail-tab-item">
+        <h2>{{dish.name}}</h2>
+        <img ng-src="img/{{dish.img_lg}}" alt="" class="img-responsive"/>
+        <p>{{dish.detail}}</p>
+        <p>{{dish.material}}</p>
+        <p class="assertive">{{dish.price | currency:'¥'}}</p>
+    </div>
+</div>
+<div class="card">
+    <div class="item item-divider text-right">
+        <button ng-click="addToCart()" class="button button-balanced button-small">添加到购物车</button>
+        <button ui-sref="commen.main" class="button button-energized button-small">我再看看</button>
+    </div>
+</div>

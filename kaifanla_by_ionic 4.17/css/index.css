@@ -1,0 +1,41 @@
+.my-start {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+}
+.my-detail-tab-item {
+  max-width: 100%;
+}
+.my-detail-tab-item .img-responsive {
+  display: block;
+  width: 100%;
+  max-height: 320px;
+}
+.my-ui-view {
+  margin-top: 53px;
+}
+.my-input input {
+  border: 1px solid #ddd;
+  width: 100%;
+  border-radius: 5%;
+  padding: 0 3%;
+}
+.my-login-alert {
+  height: 57px;
+  width: 100%;
+  color: #fff;
+  position: fixed;
+  top: -58px;
+  left: 0;
+  z-index: 10;
+}
+.my-cart-delete {
+  float: right;
+}
+.my-cart-delete:hover {
+  color: red;
+}

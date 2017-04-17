@@ -1,0 +1,45 @@
+<ion-side-menus>
+    <ion-side-menu-content>
+
+            <!--header-bar-->
+            <ion-header-bar class="bar">
+                <button class="button button-icon icon ion-android-menu calm" menu-toggle="left"></button>
+                <h1 class="title calm">开饭啦</h1>
+            </ion-header-bar>
+
+            <div ui-view="" class="my-ui-view"></div>
+
+            <!--footer-bar--利用ion-tabs做-->
+        <ion-tabs class="tabs-icon-top">
+            <ion-tab icon="ion-home"
+                     ng-click="jump('commen.main')"
+                     title="主页"></ion-tab>
+            <ion-tab icon="ion-person"
+                     ng-click="jump('commen.myorder')"
+                     title="个人中心"></ion-tab>
+            <ion-tab icon="ion-bag"
+                     badge-style="badge-assertive"
+                     badge="cartNum.cartTotalNum"
+                     ng-click="jump('commen.cart')"
+                     title="购物车"></ion-tab>
+            <ion-tab icon="ion-ios-gear" title="设置" ng-click="menu()"></ion-tab>
+        </ion-tabs>
+
+    </ion-side-menu-content>
+
+    <ion-side-menu side="left" width="200">
+        <ul class="list">
+            <li class="item">
+
+            </li>
+            <li class="item">2</li>
+            <li class="item">3</li>
+            <li class="item">
+                <button class="button button-calm button-block" ng-click="aboutUsModal()">关于我们</button>
+            </li>
+            <li class="item">
+                <button class="button button-energized button-block" ng-click="exitModal()">退出</button>
+            </li>
+        </ul>
+    <ion-side-menu>
+</ion-side-menus>

@@ -1,0 +1,34 @@
+<div class="list list-inset" ng-hide="msgSucc || msgErr">
+    <label class="item item-input item-floating-label">
+        <span class="input-label">联系人：</span>
+        <input type="text" placeholder="请输入联系人" ng-model="order.user_name"/>
+    </label>
+    <label class="item item-input item-floating-label">
+        <span class="input-label">电话：</span>
+        <input type="text" placeholder="请输入联系电话" ng-model="order.phone"/>
+    </label>
+    <label class="item item-input item-floating-label">
+        <span class="input-label">联系人：</span>
+        <input type="text" placeholder="请输入送餐地址" ng-model="order.addr"/>
+    </label>
+    <label class="item item-input">
+        <span class="input-label">选择性别：</span>
+    </label>
+    <ion-list>
+        <ion-radio value="1" ng-model="order.sex">男</ion-radio>
+        <ion-radio value="2" ng-model="order.sex">女</ion-radio>
+    </ion-list>
+    <button class="button button-balanced button-block" ng-click="submitOrder()">确定下单</button>
+</div>
+<!--下单成功或者失败显示的信息-->
+<div class="list" ng-show="msgSucc || msgErr">
+    <div class='item balanced-bg' ng-show="msgSucc">
+        <span class="ion ion-checkmark"></span>
+        {{msgSucc}}
+        <h2><span class="assertive">{{second}}</span> s后跳转到个人订单页</h2>
+    </div>
+    <div class='item assertive-bg assertive' ng-show="msgErr">
+        <span class="ion ion-alert"></span>
+        {{msgErr}}
+    </div>
+</div>

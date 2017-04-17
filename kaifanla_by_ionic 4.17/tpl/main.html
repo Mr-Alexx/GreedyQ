@@ -1,0 +1,29 @@
+<ion-content class="has-footer has-header" >
+    <div class="list list-inset my-main">
+        <div class="item item-input">
+            <i class="icon ion-search button-icon placeholder-icon"></i>
+            <input type="text" placeholder="请输入菜品名称" ng-model="inputTxt.kw"/>
+        </div>
+    </div>
+
+    <div class="list-inset list">
+        <a href="#/commen/detail/{{list.did}}" class="item item-thumbnail-left" ng-repeat="list in dishList track by $index">
+            <img ng-src="img/{{list.img_sm}}" alt=""/>
+            <h2>{{list.name}}</h2>
+            <p>{{list.detail}}</p>
+            <p style="color:red">{{list.price | currency:'￥'}}</p>
+        </a>
+    </div>
+
+    <!--滚动加载更多数据-->
+    <ion-infinite-scroll ng-if="hasMore" imediate-check="false"  on-infinite="loadMore()">
+    </ion-infinite-scroll>
+
+    <div class="list" ng-if="!hasMore">
+        <div class='item assertive-bg'>
+            <span class="ion ion-android-warning"></span>
+            没有更多数据了了！
+        </div>
+    </div>
+
+</ion-content>

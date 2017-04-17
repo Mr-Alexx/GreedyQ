@@ -1,0 +1,24 @@
+<div class="list positive-bg my-login-alert">
+    <h4 class="text-center">{{errMsg}}</h4>
+</div>
+<ion-header-bar class="bar">
+    <button ng-click="goBack()" class="icon button ion-ios-arrow-left button-icon"></button>
+    <h1 class="title">登录</h1>
+    <button ng-click="cancelLogin()" class="button button-icon icon-right">取消</button>
+</ion-header-bar>
+
+<ion-content class="has-header has-footer">
+    <div class="list list-inset">
+        <br>
+        <label class="item item-input">
+            <span class="icon ion-person placeholder-icon"></span>
+            <input type="text" placeholder="请输入用户名" ng-model="inputTxt.userName">
+        </label>
+        <br>
+        <label class="item item-input">
+            <span class="icon ion-locked placeholder-icon"></span>
+            <input type="text" placeholder="请输入密码" ng-model="inputTxt.userPwd">
+        </label>
+    </div>
+    <button class="button button-positive button-block" ng-click="loginSubmit()">登录</button>
+</ion-content>

@@ -1,0 +1,33 @@
+<ion-header-bar>
+    <button ng-click="goBack()" class="icon button ion-ios-arrow-left button-icon"></button>
+    <h1 class="title">购物车</h1>
+    <button class="button button-clear button-calm" ng-click="edit()">{{editTxt}}</button>
+</ion-header-bar>
+
+<ion-content class="has-footer has-header">
+    <div class="list list-inset">
+        <div class="item" ng-repeat="list in cartList track by $index">
+            <div class="row">
+                <div class="col">
+                    <img ng-src="img/{{list.img_sm}}" alt=""/>
+                </div>
+                <div class="col">
+
+                    <h2>{{list.name}}</h2>
+                    <p>{{list.price*list.dishCount | currency:'¥'}}
+                        <span class="my-cart-delete icon ion-android-remove-circle assertive" ng-click="cartDelete($index)" ng-if="editEnable"></span></p>
+                    <div class="col">
+                        <button ng-click="minus($index)">-</button>
+                        <span>{{list.dishCount}}</span>
+                        <button ng-click="add($index)">+</button>
+                    </div>
+                </div>
+                </div>
+
+        </div>
+        <div class="item text-right">
+            <span class="">合计:{{sumAll()| currency:'¥'}}</span>
+            <button class="button button-balanced" ng-click="jumpToOrder()">我要下单</button>
+        </div>
+    </div>
+</ion-content>
